@@ -14,9 +14,9 @@ router.use(function (req, res, next) {
 // Gets all items 
 router.get('/', (req,res) => {
     Item.find()
-        .then(items => res.json(items)
+        .then(items => res.json(items))
         .catch(err => console.log(err))
-    )
+    
 });
 
 // POST /items

@@ -29,13 +29,13 @@ class ItemList extends Component{
     updateList = () => {
          axios.get("/items").then(res => this.setState({items: res.data})).catch(err => console.log(err))
     }
-    
+      
      render() {
         return (
             <div>
                 <form onSubmit = {this.handleSubmit} className = "add-item-form">
-                <input onChange = {this.handleUserInput} type = "text" value = {this.state.userInput} placeholder = "Add new Item" className = "item-input" />
-                <input className = "item-submit" type = "submit" />
+                    <input onChange = {this.handleUserInput} type = "text" value = {this.state.userInput} placeholder = "Add new Item" className = "item-input" />
+                    <input className = "item-submit" type = "submit" />
                 </form>
                 <ul className = "item-list">
                 {
